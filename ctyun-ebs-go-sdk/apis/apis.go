@@ -1,7 +1,7 @@
 package apis
 
 import (
-	"ctyun-go-sdk/core"
+	"github.com/ctyun-ebs/ctyun-ebs-go-sdk/core"
 )
 
 const EndpointName = "ebs"

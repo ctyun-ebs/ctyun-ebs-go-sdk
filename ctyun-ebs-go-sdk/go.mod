@@ -1,4 +1,4 @@
-module ctyun-go-sdk
+module github.com/ctyun-ebs/ctyun-ebs-go-sdk
 
 go 1.14
 
