@@ -2,7 +2,7 @@ package apis
 
 import (
 	"context"
-	"github.com/ctyun-ebs/ctyun-ebs-go-sdk/core"
+	"github.com/ctyun-ebs/ctyun-ebs-go-sdk/ctyun-ebs-go-sdk/core"
 	"net/http"
 )
 

@@ -1,4 +1,4 @@
-module github.com/ctyun-ebs/ctyun-ebs-go-sdk/core
+module github.com/ctyun-ebs/ctyun-ebs-go-sdk/ctyun-ebs-go-sdk/core
 
 go 1.24.0
 
