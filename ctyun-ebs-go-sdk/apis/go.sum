@@ -1,2 +1,4 @@
-github.com/ctyun-ebs/ctyun-ebs-go-sdk v0.0.0-20250627132516-d3bbfcdc22c5 h1:YFArXbcm5p/tQkQHO4LwLloNdFbbByxIwh8KZjUJyDs=
-github.com/ctyun-ebs/ctyun-ebs-go-sdk v0.0.0-20250627132516-d3bbfcdc22c5/go.mod h1:yEmCWQ7vF81vvkuV4nf1yBsEFK+5hSz7Z2hJvS6AwMQ=
+github.com/ctyun-ebs/ctyun-ebs-go-sdk/ctyun-ebs-go-sdk/core v0.0.0-20250627141048-eefa0c535fd1 h1:vmANC0ccUFoGFFq6htUAHDU5ONa4AI5Bs7+t0jcxgj0=
+github.com/ctyun-ebs/ctyun-ebs-go-sdk/ctyun-ebs-go-sdk/core v0.0.0-20250627141048-eefa0c535fd1/go.mod h1:Lpr1KX/GGJSch+MO8iD3cFCJikZFMVcRAan3FriQFFI=
+github.com/google/uuid v1.6.0 h1:NIvaJDMOsjHA8n1jAhLSgzrAzy1Hgr+hNrb57e+94F0=
+github.com/google/uuid v1.6.0/go.mod h1:TIyPZe4MgqvfeYDBFedMoGGpEw/LqOeaOT+nhxU+yHo=
