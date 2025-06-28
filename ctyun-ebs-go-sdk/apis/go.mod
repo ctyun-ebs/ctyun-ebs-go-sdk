@@ -1,4 +1,4 @@
-module apis
+module github.com/ctyun-ebs/ctyun-ebs-go-sdk/ctyun-ebs-go-sdk/apis
 
 go 1.24.0
 
