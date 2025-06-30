@@ -138,7 +138,7 @@ type EbsQueryEbsListReturnObjDiskListResponse struct {
 	KmsUUID         string                                                 `json:"kmsUUID,omitempty"`         /*  加密盘密钥UUID，是加密盘时才返回。  */
 	RegionID        string                                                 `json:"regionID,omitempty"`        /*  资源池ID。  */
 	AzName          string                                                 `json:"azName,omitempty"`          /*  多可用区下的可用区名字，非多可用区不返回该字段。  */
-	DiskFreeze      string                                                 `json:"diskFreeze,omitempty"`      /*  云硬盘是否已冻结。  */
+	DiskFreeze      *bool                                                  `json:"diskFreeze,omitempty"`      /*  云硬盘是否已冻结。  */
 	ProvisionedIops int32                                                  `json:"provisionedIops,omitempty"` /*  XSSD类型盘的预配置iops，未配置返回0，其他类型云硬盘不返回。  */
 }
 
