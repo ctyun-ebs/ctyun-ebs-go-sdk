@@ -10,9 +10,9 @@ import (
 func TestEbsResizeEbsApi_Do(t *testing.T) {
 	// 初始化
 	client := core.DefaultClient()
-	credential := core.NewCredential("1bd1730c730945a99132011bd48ee085", "ad2b72c33c2f4d3cb38ae5b4a413bae6")
+	credential := core.NewCredential("<YOUR_AK>", "<YOUR_SK>")
 	// credential := core.CredentialFromEnv()
-	new_apis := apis.NewApis("https://ebs-global.ctapi.ctyun.cn", client)
+	new_apis := apis.NewApis("<YOUR_ENDPOINT>", client)
 	api := new_apis.EbsResizeEbsApi
 
 	// 构造请求
