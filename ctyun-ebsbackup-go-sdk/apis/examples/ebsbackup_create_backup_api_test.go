@@ -2,6 +2,7 @@ package apis
 
 import (
 	"context"
+	"github.com/ctyun-ebs/ctyun-ebs-go-sdk/ctyun-ebsbackup-go-sdk/apis"
 	"github.com/ctyun-ebs/ctyun-ebs-go-sdk/ctyun-ebsbackup-go-sdk/core"
 	"testing"
 )
@@ -11,12 +12,12 @@ func TestEbsbackupCreateBackupApi_Do(t *testing.T) {
 	client := core.DefaultClient()
 	credential := core.NewCredential("<YOUR_AK>", "<YOUR_SK>")
 	// credential := core.CredentialFromEnv()
-	apis := NewApis("<YOUR_ENDPOINT>", client)
-	api := apis.EbsbackupCreateBackupApi
+	new_apis := apis.NewApis("<YOUR_ENDPOINT>", client)
+	api := new_apis.EbsbackupCreateBackupApi
 
 	// 构造请求
 	var fullBackup bool = true
-	request := &EbsbackupCreateBackupRequest{
+	request := &apis.EbsbackupCreateBackupRequest{
 		DiskID:       "0c582801-6b20-4e3a-956a-f3afbb5e9725",
 		RegionID:     "81f7728662dd11ec810800155d307d5b",
 		Description:  "test-bak's description",

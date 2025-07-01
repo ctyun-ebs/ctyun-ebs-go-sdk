@@ -11,11 +11,11 @@ func TestEbsbackupRenewRepoApi_Do(t *testing.T) {
 	client := core.DefaultClient()
 	credential := core.NewCredential("<YOUR_AK>", "<YOUR_SK>")
 	// credential := core.CredentialFromEnv()
-	apis := NewApis("<YOUR_ENDPOINT>", client)
-	api := apis.EbsbackupRenewRepoApi
+	new_apis := apis.NewApis("<YOUR_ENDPOINT>", client)
+	api := new_apis.EbsbackupRenewRepoApi
 
 	// 构造请求
-	request := &EbsbackupRenewRepoRequest{
+	request := &apis.EbsbackupRenewRepoRequest{
 		ClientToken:  "4cf2962d-e92c-4c00-9181-cfbb2218636c",
 		RegionID:     "81f7728662dd11ec810800155d307d5b",
 		RepositoryID: "3df0974e-bbf7-43fa-acc1-af2b69cc184d",

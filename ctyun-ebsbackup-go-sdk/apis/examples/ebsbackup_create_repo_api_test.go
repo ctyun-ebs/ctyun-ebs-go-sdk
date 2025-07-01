@@ -11,11 +11,11 @@ func TestEbsbackupCreateRepoApi_Do(t *testing.T) {
 	client := core.DefaultClient()
 	credential := core.NewCredential("<YOUR_AK>", "<YOUR_SK>")
 	// credential := core.CredentialFromEnv()
-	apis := NewApis("<YOUR_ENDPOINT>", client)
-	api := apis.EbsbackupCreateRepoApi
+	new_apis := apis.NewApis("<YOUR_ENDPOINT>", client)
+	api := new_apis.EbsbackupCreateRepoApi
 
 	// 构造请求
-	request := &EbsbackupCreateRepoRequest{
+	request := &apis.EbsbackupCreateRepoRequest{
 		ClientToken:     "4cf2962d-e92c-4c00-9181-cfbb2218636c",
 		RegionID:        "81f7728662dd11ec810800155d307d5b",
 		RepositoryName:  "test-repo1",

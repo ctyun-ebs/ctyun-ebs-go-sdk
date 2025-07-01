@@ -11,11 +11,11 @@ func TestEbsbackupListBackupApi_Do(t *testing.T) {
 	client := core.DefaultClient()
 	credential := core.NewCredential("<YOUR_AK>", "<YOUR_SK>")
 	// credential := core.CredentialFromEnv()
-	apis := NewApis("<YOUR_ENDPOINT>", client)
-	api := apis.EbsbackupListBackupApi
+	new_apis := apis.NewApis("<YOUR_ENDPOINT>", client)
+	api := new_apis.EbsbackupListBackupApi
 
 	// 构造请求
-	request := &EbsbackupListBackupRequest{
+	request := &apis.EbsbackupListBackupRequest{
 		RegionID:     "81f7728662dd11ec810800155d307d5b",
 		DiskID:       "0c582801-6b20-4e3a-956a-f3afbb5e9725",
 		DiskName:     "test-vol",

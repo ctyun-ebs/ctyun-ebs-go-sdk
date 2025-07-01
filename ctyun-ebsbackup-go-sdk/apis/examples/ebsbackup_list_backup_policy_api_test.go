@@ -11,11 +11,11 @@ func TestEbsbackupListBackupPolicyApi_Do(t *testing.T) {
 	client := core.DefaultClient()
 	credential := core.NewCredential("<YOUR_AK>", "<YOUR_SK>")
 	// credential := core.CredentialFromEnv()
-	apis := NewApis("<YOUR_ENDPOINT>", client)
-	api := apis.EbsbackupListBackupPolicyApi
+	new_apis := apis.NewApis("<YOUR_ENDPOINT>", client)
+	api := new_apis.EbsbackupListBackupPolicyApi
 
 	// 构造请求
-	request := &EbsbackupListBackupPolicyRequest{
+	request := &apis.EbsbackupListBackupPolicyRequest{
 		RegionID:   "81f7728662dd11ec810800155d307d5b",
 		PageNo:     1,
 		PageSize:   10,

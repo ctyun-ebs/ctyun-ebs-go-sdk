@@ -11,11 +11,11 @@ func TestEbsbackupDeleteEbsBackupPolicyApi_Do(t *testing.T) {
 	client := core.DefaultClient()
 	credential := core.NewCredential("<YOUR_AK>", "<YOUR_SK>")
 	// credential := core.CredentialFromEnv()
-	apis := NewApis("<YOUR_ENDPOINT>", client)
-	api := apis.EbsbackupDeleteEbsBackupPolicyApi
+	new_apis := apis.NewApis("<YOUR_ENDPOINT>", client)
+	api := new_apis.EbsbackupDeleteEbsBackupPolicyApi
 
 	// 构造请求
-	request := &EbsbackupDeleteEbsBackupPolicyRequest{
+	request := &apis.EbsbackupDeleteEbsBackupPolicyRequest{
 		RegionID:  "81f7728662dd11ec810800155d307d5b",
 		PolicyIDs: "d15e7d402f8f11ed81370242ac110006，6ff161244e8611ed85170242ac110002",
 	}
