@@ -10,9 +10,9 @@ import (
 func TestEbsNewEbsApi_Do(t *testing.T) {
 	// 初始化
 	client := core.DefaultClient()
-	credential := core.NewCredential("<YOUR_AK>", "<YOUR_SK>")
+	credential := core.NewCredential("1bd1730c730945a99132011bd48ee085", "ad2b72c33c2f4d3cb38ae5b4a413bae6")
 	// credential := core.CredentialFromEnv()
-	new_apis := apis.NewApis("<YOUR_ENDPOINT>", client)
+	new_apis := apis.NewApis("https://ebs-global.ctapi.ctyun.cn", client)
 	api := new_apis.EbsNewEbsApi
 
 	// 构造请求
@@ -21,22 +21,22 @@ func TestEbsNewEbsApi_Do(t *testing.T) {
 	var onDemand bool = false
 	var deleteSnapWithEbs bool = false
 	request := &apis.EbsNewEbsRequest{
-		ClientToken:       "20230211ebsspec7",
-		RegionID:          "81f7728662dd11ec810800155d307d5b",
-		MultiAttach:       &multiAttach,
-		IsEncrypt:         &isEncrypt,
-		KmsUUID:           "111d979e-5f30-4dd6-a167-c8c8cdd8aa7c",
-		ProjectID:         "0",
-		DiskMode:          "VBD",
-		DiskType:          "SATA",
-		DiskName:          "ebs-newspec-test0211v7",
-		DiskSize:          10,
-		OnDemand:          &onDemand,
-		CycleType:         "month",
-		CycleCount:        1,
-		ImageID:           "sjsidfnsdfsf",
-		AzName:            "az2",
-		ProvisionedIops:   1,
+		ClientToken: "20230211ebsspec7",
+		RegionID:    "bb9fdb42056f11eda1610242ac110002",
+		MultiAttach: &multiAttach,
+		IsEncrypt:   &isEncrypt,
+		//KmsUUID:           "111d979e-5f30-4dd6-a167-c8c8cdd8aa7c",
+		ProjectID:  "0",
+		DiskMode:   "VBD",
+		DiskType:   "SATA",
+		DiskName:   "ebs-newspec-test0211v7",
+		DiskSize:   10,
+		OnDemand:   &onDemand,
+		CycleType:  "month",
+		CycleCount: 1,
+		//ImageID:           "sjsidfnsdfsf",
+		AzName: "cn-huadong1-jsnj1A-public-ctcloud",
+		//ProvisionedIops:   1,
 		DeleteSnapWithEbs: &deleteSnapWithEbs,
 		Labels: []*apis.EbsNewEbsLabelsRequest{
 			{
@@ -44,7 +44,7 @@ func TestEbsNewEbsApi_Do(t *testing.T) {
 				Value: "fe33",
 			},
 		},
-		BackupID: "0ae97ef5-6ee2-44af-9d05-1a509b0a1be6",
+		//BackupID: "0ae97ef5-6ee2-44af-9d05-1a509b0a1be6",
 	}
 
 	// 发起调用

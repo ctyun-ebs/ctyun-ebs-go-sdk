@@ -59,12 +59,12 @@ func (a *EbsbackupListBackupPolicyApi) Do(ctx context.Context, credential core.C
 }
 
 type EbsbackupListBackupPolicyRequest struct {
-	RegionID   string `json:"regionID,omitempty"`   /*  资源池ID，您可以查看<a href="https://www.ctyun.cn/document/10026730/10028695">地域和可用区</a>来了解资源池 <br />获取：<br /><span style="background-color: rgb(73, 204, 144);color: rgb(255,255,255);padding: 2px; margin:2px">查</span> <a  href="https://eop.ctyun.cn/ebp/ctapiDocument/search?sid=25&api=5851&data=87">资源池列表查询</a>  */
+	RegionID   string `json:"regionID,omitempty"`   /*  资源池ID */
 	PageNo     int32  `json:"pageNo,omitempty"`     /*  页码，默认值1  */
 	PageSize   int32  `json:"pageSize,omitempty"`   /*  每页记录数目 ,默认10  */
 	PolicyID   string `json:"policyID,omitempty"`   /*  备份策略ID  */
 	PolicyName string `json:"policyName,omitempty"` /*  备份策略名，指定了policyID时，该参数会被忽略  */
-	ProjectID  string `json:"projectID,omitempty"`  /*  企业项目ID，企业项目管理服务提供统一的云资源按企业项目管理，以及企业项目内的资源管理，成员管理。您可以通过查看<a href="https://www.ctyun.cn/document/10026730/10238876">创建企业项目</a>了解如何创建企业项目<br />注：默认值为"0"  */
+	ProjectID  string `json:"projectID,omitempty"`  /*  企业项目ID，企业项目管理服务提供统一的云资源按企业项目管理，以及企业项目内的资源管理，成员管理。  */
 }
 
 type EbsbackupListBackupPolicyResponse struct {

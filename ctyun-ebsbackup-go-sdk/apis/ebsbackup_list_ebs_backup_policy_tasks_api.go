@@ -60,8 +60,8 @@ func (a *EbsbackupListEbsBackupPolicyTasksApi) Do(ctx context.Context, credentia
 }
 
 type EbsbackupListEbsBackupPolicyTasksRequest struct {
-	RegionID   string `json:"regionID,omitempty"`   /*  资源池ID，您可以查看<a href="https://www.ctyun.cn/document/10026730/10028695">地域和可用区</a>来了解资源池 <br />获取：<br /><span style="background-color: rgb(73, 204, 144);color: rgb(255,255,255);padding: 2px; margin:2px">查</span> <a  href="https://eop.ctyun.cn/ebp/ctapiDocument/search?sid=25&api=5851&data=87">资源池列表查询</a>  */
-	PolicyID   string `json:"policyID,omitempty"`   /*  备份策略ID，您可以通过<a href="https://www.ctyun.cn/document/10026752/10040084">查询备份策略</a>获取  */
+	RegionID   string `json:"regionID,omitempty"`   /*  资源池ID */
+	PolicyID   string `json:"policyID,omitempty"`   /*  备份策略ID */
 	PageNo     int32  `json:"pageNo,omitempty"`     /*  页码，默认值1  */
 	PageSize   int32  `json:"pageSize,omitempty"`   /*  每页记录数目 ,默认10  */
 	Asc        *bool  `json:"asc"`                  /*  和sort配合使用，是否升序排列，默认降序  */

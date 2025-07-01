@@ -56,7 +56,7 @@ func (a *EbsbackupListBackupTaskApi) Do(ctx context.Context, credential core.Cre
 }
 
 type EbsbackupListBackupTaskRequest struct {
-	RegionID     string `json:"regionID,omitempty"`     /*  资源池ID，您可以查看<a href="https://www.ctyun.cn/document/10026730/10028695">地域和可用区</a>来了解资源池 <br />获取：<br /><span style="background-color: rgb(73, 204, 144);color: rgb(255,255,255);padding: 2px; margin:2px">查</span> <a  href="https://eop.ctyun.cn/ebp/ctapiDocument/search?sid=25&api=5851&data=87">资源池列表查询</a>  */
+	RegionID     string `json:"regionID,omitempty"`     /*  资源池ID  */
 	TaskID       string `json:"taskID,omitempty"`       /*  云硬盘备份任务ID。  */
 	QueryContent string `json:"queryContent,omitempty"` /*  该参数，可用于模糊过滤，任务ID/云硬盘ID/云硬盘名称/备份任务ID/备份名称/存储库名称，即上述6个字段如果包含该参数的值，则会被过滤出来。  */
 	TaskStatus   string `json:"taskStatus,omitempty"`   /*  任务状态：<br />执行中:"running"<br />成功:"success"<br />失败:"failed"<br />已取消:"canceled"<br />取消中:"canceling"  */

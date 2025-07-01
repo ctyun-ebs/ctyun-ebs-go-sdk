@@ -61,7 +61,7 @@ type EbsbackupCreateEbsBackupPolicyRequest struct {
 	RetentionNum          int32  `json:"retentionNum,omitempty"`       /*  保留数量，只有retentionType为num时需设置,取值范围1-99999  */
 	RetentionDay          int32  `json:"retentionDay,omitempty"`       /*  保留天数，只有retentionType为date时需设置，取值1-99999  */
 	RemainFirstOfCurMonth *bool  `json:"remainFirstOfCurMonth"`        /*  是否保留每个月第一个备份，在retentionType为num时可设置，默认false  */
-	ProjectID             string `json:"projectID,omitempty"`          /*  企业项目ID，企业项目管理服务提供统一的云资源按企业项目管理，以及企业项目内的资源管理，成员管理。您可以通过查看<a href="https://www.ctyun.cn/document/10026730/10238876">创建企业项目</a>了解如何创建企业项目<br />注：默认值为"0"  */
+	ProjectID             string `json:"projectID,omitempty"`          /*  企业项目ID，企业项目管理服务提供统一的云资源按企业项目管理，以及企业项目内的资源管理，成员管理。*/
 	FullBackupInterval    int32  `json:"fullBackupInterval,omitempty"` /*  启用周期性全量备份。-1代表不开启，默认为-1；取值范围为[-1,100]，即每执行n次增量备份后，执行一次全量备份；若传入为0，代表每一次均为全量备份  */
 	AdvRetentionStatus    *bool  `json:"advRetentionStatus"`           /*  是否启用高级保留策略，取值范围：
 	●true：启用
@@ -71,14 +71,10 @@ type EbsbackupCreateEbsBackupPolicyRequest struct {
 }
 
 type EbsbackupCreateEbsBackupPolicyAdvRetentionRequest struct {
-	AdvDay int32 `json:"advDay,omitempty"` /*  ● 保留n天内，每天最新的一个备份。
-	● 单位为天，取值范围：[0, 100]，默认值0  */
-	AdvWeek int32 `json:"advWeek,omitempty"` /*  ● 保留n周内，每周最新的一个备份。
-	● 单位为周，取值范围：[0, 100]，默认值0  */
-	AdvMonth int32 `json:"advMonth,omitempty"` /*  ● 保留n月内，每月最新的一个备份。
-	● 单位为月，取值范围：[0, 100]，默认值0  */
-	AdvYear int32 `json:"advYear,omitempty"` /*  ● 保留n年内，每年最新的一个备份。
-	● 单位为年，取值范围：[0, 100]，默认值0  */
+	AdvDay   int32 `json:"advDay,omitempty"`   /*  ● 保留n天内，每天最新的一个备份。● 单位为天，取值范围：[0, 100]，默认值0  */
+	AdvWeek  int32 `json:"advWeek,omitempty"`  /*  ● 保留n周内，每周最新的一个备份。● 单位为周，取值范围：[0, 100]，默认值0  */
+	AdvMonth int32 `json:"advMonth,omitempty"` /*  ● 保留n月内，每月最新的一个备份。● 单位为月，取值范围：[0, 100]，默认值0  */
+	AdvYear  int32 `json:"advYear,omitempty"`  /*  ● 保留n年内，每年最新的一个备份。 ● 单位为年，取值范围：[0, 100]，默认值0  */
 }
 
 type EbsbackupCreateEbsBackupPolicyResponse struct {

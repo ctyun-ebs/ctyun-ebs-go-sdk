@@ -8,8 +8,7 @@ import (
 
 // EbsbackupRenewRepoApi
 /* 续订云硬盘备份存储库，该接口会涉及计费<br />
- */ /* <b>准备工作：</b><br />
- */ /* &emsp;&emsp;计费模式：确认续订存储库的计费模式，详细查看<a href="https://www.ctyun.cn/document/10026730/10030877">计费模式</a><br />
+
  */type EbsbackupRenewRepoApi struct {
 	template core.CtyunRequestTemplate
 	client   *core.CtyunClient
@@ -53,8 +52,8 @@ func (a *EbsbackupRenewRepoApi) Do(ctx context.Context, credential core.Credenti
 
 type EbsbackupRenewRepoRequest struct {
 	ClientToken  string `json:"clientToken,omitempty"`  /*  用于保证订单幂等性。要求单个云平台账户内唯一。使用同一个ClientToken值，其他请求参数相同时，则代表为同一个请求  */
-	RegionID     string `json:"regionID,omitempty"`     /*  资源池ID，您可以查看<a href="https://www.ctyun.cn/document/10026730/10028695">地域和可用区</a>来了解资源池 <br />获取：<br /><span style="background-color: rgb(73, 204, 144);color: rgb(255,255,255);padding: 2px; margin:2px">查</span> <a  href="https://eop.ctyun.cn/ebp/ctapiDocument/search?sid=25&api=5851&data=87">资源池列表查询</a>  */
-	RepositoryID string `json:"repositoryID,omitempty"` /*  云硬盘备份存储库ID，您可以通过<a href="https://www.ctyun.cn/document/10026752/10039480">查询存储库列表</a>获取  */
+	RegionID     string `json:"regionID,omitempty"`     /*  资源池ID  */
+	RepositoryID string `json:"repositoryID,omitempty"` /*  云硬盘备份存储库ID  */
 	CycleType    string `json:"cycleType,omitempty"`    /*  本参数表示订购周期类型 ，取值范围：<br />MONTH：按月<br />YEAR：按年<br />最长订购周期为3年  */
 	CycleCount   int32  `json:"cycleCount,omitempty"`   /*  订购时长，与cycleType配合，cycleType为Month时，单位为月，cycleType为YEAR时，单位为年  */
 }

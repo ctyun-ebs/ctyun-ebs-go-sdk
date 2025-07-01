@@ -50,9 +50,9 @@ func (a *EbsbackupRestoreBackupApi) Do(ctx context.Context, credential core.Cred
 }
 
 type EbsbackupRestoreBackupRequest struct {
-	RegionID string `json:"regionID,omitempty"` /*  资源池ID，您可以查看<a href="https://www.ctyun.cn/document/10026730/10028695">地域和可用区</a>来了解资源池 <br />获取：<br /><span style="background-color: rgb(73, 204, 144);color: rgb(255,255,255);padding: 2px; margin:2px">查</span> <a  href="https://eop.ctyun.cn/ebp/ctapiDocument/search?sid=25&api=5851&data=87">资源池列表查询</a>  */
-	BackupID string `json:"backupID,omitempty"` /*  云硬盘备份ID，您可以通过<a href="https://www.ctyun.cn/document/10026752/10039050">查询云硬盘备份列表</a>获取  */
-	DiskID   string `json:"diskID,omitempty"`   /*  云硬盘ID，您可以通过<a href="https://www.ctyun.cn/document/10027696/10096187">查询云硬盘列表</a>获取  */
+	RegionID string `json:"regionID,omitempty"` /*  资源池ID  */
+	BackupID string `json:"backupID,omitempty"` /*  云硬盘备份ID  */
+	DiskID   string `json:"diskID,omitempty"`   /*  云硬盘ID  */
 }
 
 type EbsbackupRestoreBackupResponse struct {

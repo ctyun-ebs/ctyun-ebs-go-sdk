@@ -50,7 +50,7 @@ func (a *EbsbackupUpdateEbsBackupPolicyApi) Do(ctx context.Context, credential c
 }
 
 type EbsbackupUpdateEbsBackupPolicyRequest struct {
-	RegionID              string `json:"regionID,omitempty"`           /*  资源池ID，您可以查看<a href="https://www.ctyun.cn/document/10026730/10028695">地域和可用区</a>来了解资源池 <br />获取：<br /><span style="background-color: rgb(73, 204, 144);color: rgb(255,255,255);padding: 2px; margin:2px">查</span> <a  href="https://eop.ctyun.cn/ebp/ctapiDocument/search?sid=25&api=5851&data=87">资源池列表查询</a>  */
+	RegionID              string `json:"regionID,omitempty"`           /*  资源池ID  */
 	PolicyID              string `json:"policyID,omitempty"`           /*  备份策略ID，您可以通过<a href="https://www.ctyun.cn/document/10026752/10040084">查询备份策略</a>获取  */
 	PolicyName            string `json:"policyName,omitempty"`         /*  策略名，唯一，不可重复  */
 	CycleType             string `json:"cycleType,omitempty"`          /*  备份周期类型，day-按天备份，week-按星期备份  */
@@ -70,14 +70,10 @@ type EbsbackupUpdateEbsBackupPolicyRequest struct {
 }
 
 type EbsbackupUpdateEbsBackupPolicyAdvRetentionRequest struct {
-	AdvDay int32 `json:"advDay,omitempty"` /*  ● 保留n天内，每天最新的一个备份。
-	● 单位为天，取值范围：[0, 100]，默认值0  */
-	AdvWeek int32 `json:"advWeek,omitempty"` /*  ● 保留n周内，每周最新的一个备份。
-	● 单位为周，取值范围：[0, 100]，默认值0  */
-	AdvMonth int32 `json:"advMonth,omitempty"` /*  ● 保留n月内，每月最新的一个备份。
-	● 单位为月，取值范围：[0, 100]，默认值0  */
-	AdvYear int32 `json:"advYear,omitempty"` /*  ● 保留n年内，每年最新的一个备份。
-	● 单位为年，取值范围：[0, 100]，默认值0  */
+	AdvDay   int32 `json:"advDay,omitempty"`   /*  ● 保留n天内，每天最新的一个备份。● 单位为天，取值范围：[0, 100]，默认值0  */
+	AdvWeek  int32 `json:"advWeek,omitempty"`  /*  ● 保留n周内，每周最新的一个备份。● 单位为周，取值范围：[0, 100]，默认值0  */
+	AdvMonth int32 `json:"advMonth,omitempty"` /*  ● 保留n月内，每月最新的一个备份。● 单位为月，取值范围：[0, 100]，默认值0  */
+	AdvYear  int32 `json:"advYear,omitempty"`  /*  ● 保留n年内，每年最新的一个备份。● 单位为年，取值范围：[0, 100]，默认值0  */
 }
 
 type EbsbackupUpdateEbsBackupPolicyResponse struct {

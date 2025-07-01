@@ -66,8 +66,8 @@ type EbsDetachEbsResponse struct {
 }
 
 type EbsDetachEbsReturnObjResponse struct {
-	DiskJobID     string `json:"diskJobID,omitempty"`     /*  异步任务ID，可通过公共接口/v4/job/info查询该jobID来查看异步任务最终执行结果（该参数即将被弃用，为提高兼容性，请尽量使用diskRequestID参数）。  */
-	DiskRequestID string `json:"diskRequestID,omitempty"` /*  异步任务ID，可通过公共接口/v4/job/info查询该jobID来查看异步任务最终执行结果。  */
+	DiskJobID     string `json:"diskJobID,omitempty"`     /*  异步任务ID  */
+	DiskRequestID string `json:"diskRequestID,omitempty"` /*  异步任务ID  */
 }
 
 type EbsDetachEbsErrorDetailResponse struct {

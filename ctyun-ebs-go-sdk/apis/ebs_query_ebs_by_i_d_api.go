@@ -73,7 +73,7 @@ type EbsQueryEbsByIDReturnObjResponse struct {
 	●VBD（Virtual Block Device）：虚拟块存储设备。
 	●ISCSI （Internet Small Computer System Interface）：小型计算机系统接口。
 	●FCSAN（Fibre Channel SAN）：光纤通道协议的SAN网络。  */
-	DiskStatus       string                                         `json:"diskStatus,omitempty"`       /*  参考 <a href='https://www.ctyun.cn/document/10027696/10168629'>云硬盘使用状态</a>  */
+	DiskStatus       string                                         `json:"diskStatus,omitempty"`       /*  参考 https://www.ctyun.cn/document/10027696/10168629  */
 	CreateTime       int64                                          `json:"createTime,omitempty"`       /*  创建时刻，epoch时戳，精度毫秒。  */
 	UpdateTime       int64                                          `json:"updateTime,omitempty"`       /*  更新时刻，epoch时戳，精度毫秒。  */
 	ExpireTime       int64                                          `json:"expireTime,omitempty"`       /*  过期时刻，epoch时戳，精度毫秒。  */
@@ -81,7 +81,7 @@ type EbsQueryEbsByIDReturnObjResponse struct {
 	IsPackaged       *bool                                          `json:"isPackaged"`                 /*  是否随云主机一起订购。  */
 	InstanceName     string                                         `json:"instanceName,omitempty"`     /*  绑定的云主机名称，有挂载时才返回。  */
 	InstanceID       string                                         `json:"instanceID,omitempty"`       /*  绑定的云主机ID，有挂载时才返回。  */
-	InstanceStatus   string                                         `json:"instanceStatus,omitempty"`   /*  云主机状态，参考<a href='https://www.ctyun.cn/document/10027696/10168629'>云主机使用状态</a>  */
+	InstanceStatus   string                                         `json:"instanceStatus,omitempty"`   /*  云主机状态，参考https://www.ctyun.cn/document/10027696/10168629  */
 	MultiAttach      *bool                                          `json:"multiAttach"`                /*  是否是共享云硬盘。  */
 	Attachments      []*EbsQueryEbsByIDReturnObjAttachmentsResponse `json:"attachments"`                /*  挂载信息。如果是共享挂载云硬盘，则返回多项；无挂载时不返回该字段。  */
 	ProjectID        string                                         `json:"projectID,omitempty"`        /*  资源所属的企业项目ID。  */

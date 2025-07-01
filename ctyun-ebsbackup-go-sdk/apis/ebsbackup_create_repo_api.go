@@ -57,7 +57,7 @@ func (a *EbsbackupCreateRepoApi) Do(ctx context.Context, credential core.Credent
 
 type EbsbackupCreateRepoRequest struct {
 	ClientToken    string `json:"clientToken,omitempty"`    /*  用于保证订单幂等性。要求单个云平台账户内唯一。使用同一个ClientToken值，其他请求参数相同时，则代表为同一个请求  */
-	RegionID       string `json:"regionID,omitempty"`       /*  资源池ID，您可以查看<a href="https://www.ctyun.cn/document/10026730/10028695">地域和可用区</a>来了解资源池 <br />获取：<br /><span style="background-color: rgb(73, 204, 144);color: rgb(255,255,255);padding: 2px; margin:2px">查</span> <a  href="https://eop.ctyun.cn/ebp/ctapiDocument/search?sid=25&api=5851&data=87">资源池列表查询</a>  */
+	RegionID       string `json:"regionID,omitempty"`       /*  资源池ID */
 	RepositoryName string `json:"repositoryName,omitempty"` /*  云硬盘备份存储库名称，长度为 2~32 个字符，只能由数字、字母、- 组成，不能以数字、- 开头，且不能以 - 结尾  */
 	Size           int32  `json:"size,omitempty"`           /*  云硬盘备份存储库容量，单位GB，取值100-1024000，默认100  */
 	OnDemand       string `json:"onDemand,omitempty"`       /*  是否按需下单，取值范围：
@@ -69,8 +69,8 @@ type EbsbackupCreateRepoRequest struct {
 	YEAR：按年
 	最长订购周期为3年，onDemand为false时，必须指定。  */
 	CycleCount      int32  `json:"cycleCount,omitempty"`      /*  订购时长，与cycleType配合，cycleType为MONTH时，单位为月，cycleType为YEAR时，单位为年  */
-	AutoRenewStatus int32  `json:"autoRenewStatus,omitempty"` /*  本参数表示是否自动续订 ，只有onDemand为false时生效，取值范围：<br />0：不续费<br />1：自动续费<br />默认不自动续费，如果选择自动续费：<br />按月购买：自动续订周期为3个月;按年购买：自动续订周期为1年  */
-	ProjectID       string `json:"projectID,omitempty"`       /*  企业项目ID，企业项目管理服务提供统一的云资源按企业项目管理，以及企业项目内的资源管理，成员管理。您可以通过查看<a href="https://www.ctyun.cn/document/10026730/10238876">创建企业项目</a>了解如何创建企业项目<br />注：默认值为"0"  */
+	AutoRenewStatus int32  `json:"autoRenewStatus,omitempty"` /*  本参数表示是否自动续订 ，只有onDemand为false时生效，取值范围：0：不续费 1：自动续费。默认不自动续费，如果选择自动续费：按月购买：自动续订周期为3个月;按年购买：自动续订周期为1年  */
+	ProjectID       string `json:"projectID,omitempty"`       /*  企业项目ID，企业项目管理服务提供统一的云资源按企业项目管理，以及企业项目内的资源管理，成员管理。注：默认值为"0"  */
 }
 
 type EbsbackupCreateRepoResponse struct {

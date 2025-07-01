@@ -74,7 +74,7 @@ func (a *EbsbackupListBackupRepoApi) Do(ctx context.Context, credential core.Cre
 }
 
 type EbsbackupListBackupRepoRequest struct {
-	RegionID       string `json:"regionID,omitempty"`       /*  资源池ID，您可以查看<a href="https://www.ctyun.cn/document/10026730/10028695">地域和可用区</a>来了解资源池 <br />获取：<br /><span style="background-color: rgb(73, 204, 144);color: rgb(255,255,255);padding: 2px; margin:2px">查</span> <a  href="https://eop.ctyun.cn/ebp/ctapiDocument/search?sid=25&api=5851&data=87">资源池列表查询</a>  */
+	RegionID       string `json:"regionID,omitempty"`       /*  资源池ID  */
 	RepositoryName string `json:"repositoryName,omitempty"` /*  云硬盘备份存储库名称。  */
 	RepositoryID   string `json:"repositoryID,omitempty"`   /*  云硬盘备份存储库ID。  */
 	Status         string `json:"status,omitempty"`         /*  云硬盘备份存储库状态，取值范围：
@@ -88,7 +88,7 @@ type EbsbackupListBackupRepoRequest struct {
 	PageSize     int32  `json:"pageSize,omitempty"`     /*  每页记录数目 ,默认10。  */
 	Asc          *bool  `json:"asc"`                    /*  和sort配合使用，是否升序排列。  */
 	Sort         string `json:"sort,omitempty"`         /*  和asc配合使用，指定用于排序的字段。可选字段：createdTime/expiredTime/size/freeSize/usedSize/repositoryName  */
-	ProjectID    string `json:"projectID,omitempty"`    /*  企业项目ID，企业项目管理服务提供统一的云资源按企业项目管理，以及企业项目内的资源管理，成员管理。您可以通过查看<a href="https://www.ctyun.cn/document/10026730/10238876">创建企业项目</a>了解如何创建企业项目<br />注：默认值为"0"  */
+	ProjectID    string `json:"projectID,omitempty"`    /*  企业项目ID，企业项目管理服务提供统一的云资源按企业项目管理，以及企业项目内的资源管理，成员管理。注：默认值为"0"  */
 }
 
 type EbsbackupListBackupRepoResponse struct {

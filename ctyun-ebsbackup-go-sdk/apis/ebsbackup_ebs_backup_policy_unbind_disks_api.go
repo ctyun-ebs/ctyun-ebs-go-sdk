@@ -50,9 +50,9 @@ func (a *EbsbackupEbsBackupPolicyUnbindDisksApi) Do(ctx context.Context, credent
 }
 
 type EbsbackupEbsBackupPolicyUnbindDisksRequest struct {
-	RegionID string `json:"regionID,omitempty"` /*  资源池ID，您可以查看<a href="https://www.ctyun.cn/document/10026730/10028695">地域和可用区</a>来了解资源池 <br />获取：<br /><span style="background-color: rgb(73, 204, 144);color: rgb(255,255,255);padding: 2px; margin:2px">查</span> <a  href="https://eop.ctyun.cn/ebp/ctapiDocument/search?sid=25&api=5851&data=87">资源池列表查询</a>  */
-	PolicyID string `json:"policyID,omitempty"` /*  备份策略ID，您可以通过<a href="https://www.ctyun.cn/document/10026752/10040084">查询备份策略</a>获取  */
-	DiskIDs  string `json:"diskIDs,omitempty"`  /*  云硬盘ID,如果解绑多个,请使用逗号隔开，您可以通过<a href="https://www.ctyun.cn/document/10026752/10076567">查询备份策略绑定的云硬盘列表</a>获取  */
+	RegionID string `json:"regionID,omitempty"` /*  资源池ID  */
+	PolicyID string `json:"policyID,omitempty"` /*  备份策略ID  */
+	DiskIDs  string `json:"diskIDs,omitempty"`  /*  云硬盘ID  */
 }
 
 type EbsbackupEbsBackupPolicyUnbindDisksResponse struct {
