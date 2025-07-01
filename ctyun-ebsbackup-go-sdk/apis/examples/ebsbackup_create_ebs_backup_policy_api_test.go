@@ -2,6 +2,7 @@ package apis
 
 import (
 	"context"
+	"github.com/ctyun-ebs/ctyun-ebs-go-sdk/ctyun-ebsbackup-go-sdk/apis"
 	"github.com/ctyun-ebs/ctyun-ebs-go-sdk/ctyun-ebsbackup-go-sdk/core"
 	"testing"
 )
@@ -32,7 +33,7 @@ func TestEbsbackupCreateEbsBackupPolicyApi_Do(t *testing.T) {
 		ProjectID:             "0",
 		FullBackupInterval:    1,
 		AdvRetentionStatus:    &advRetentionStatus,
-		AdvRetention: &EbsbackupCreateEbsBackupPolicyAdvRetentionRequest{
+		AdvRetention: &apis.EbsbackupCreateEbsBackupPolicyAdvRetentionRequest{
 			AdvDay:   1,
 			AdvWeek:  1,
 			AdvMonth: 1,

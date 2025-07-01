@@ -2,6 +2,7 @@ package apis
 
 import (
 	"context"
+	"github.com/ctyun-ebs/ctyun-ebs-go-sdk/ctyun-ebsbackup-go-sdk/apis"
 	"github.com/ctyun-ebs/ctyun-ebs-go-sdk/ctyun-ebsbackup-go-sdk/core"
 	"testing"
 )
