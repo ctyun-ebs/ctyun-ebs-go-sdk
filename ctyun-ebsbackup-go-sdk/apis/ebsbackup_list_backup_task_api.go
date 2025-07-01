@@ -91,8 +91,8 @@ type EbsbackupListBackupTaskReturnObjTaskListResponse struct {
 	StatusCode     string `json:"statusCode,omitempty"`     /*  任务状态码。  */
 	TaskProgress   string `json:"taskProgress,omitempty"`   /*  任务进度，取值为0-100。  */
 	Status         string `json:"status,omitempty"`         /*  任务状态描述:<br />成功:success<br />执行中:running<br />失败:failed<br />已取消：canceled<br />取消中：canceling  */
-	TaskStartTime  string `json:"taskStartTime,omitempty"`  /*  任务开始时间。  */
-	TaskDoneTime   string `json:"taskDoneTime,omitempty"`   /*  任务完成时间。  */
+	TaskStartTime  int32  `json:"taskStartTime,omitempty"`  /*  任务开始时间。  */
+	TaskDoneTime   int32  `json:"taskDoneTime,omitempty"`   /*  任务完成时间。  */
 	TaskErrMsg     string `json:"taskErrMsg,omitempty"`     /*  任务执行过程中的错误信息描述。  */
 	TaskDetail     string `json:"taskDetail,omitempty"`     /*  任务执行过程中附加信息描述。  */
 	Description    string `json:"description,omitempty"`    /*  任务描述。  */
