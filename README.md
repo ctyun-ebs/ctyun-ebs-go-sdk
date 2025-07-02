@@ -13,8 +13,8 @@ ctyun-ebsbackup-go-sdk/apis/examples
 
 获取依赖
 ```text
-go get github.com/ctyun-ebs/ctyun-ebs-go-sdk/ctyun-ebs-go-sdk/apis
-go get github.com/ctyun-ebs/ctyun-ebs-go-sdk/ctyun-ebsbackup-go-sdk/apis
+go get github.com/ctyun-ebs/ctyun-ebs-go-sdk/ctyun-ebs-go-sdk/apis@latest
+go get github.com/ctyun-ebs/ctyun-ebs-go-sdk/ctyun-ebsbackup-go-sdk/apis@latest
 ```
 
 ### 相关文档
